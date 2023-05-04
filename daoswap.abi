@@ -1,0 +1,1062 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "bank",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "bank_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "cancel",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "config_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "status",
+                    "type": "name"
+                },
+                {
+                    "name": "trade_fee",
+                    "type": "uint8"
+                },
+                {
+                    "name": "protocol_fee",
+                    "type": "uint8"
+                },
+                {
+                    "name": "fee_account",
+                    "type": "name"
+                },
+                {
+                    "name": "mgr_account",
+                    "type": "name"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "notifiers",
+                    "type": "name[]"
+                },
+                {
+                    "name": "minlocktimes",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "createpair",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "contract0",
+                    "type": "name"
+                },
+                {
+                    "name": "code0",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "contract1",
+                    "type": "name"
+                },
+                {
+                    "name": "code1",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "deposit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "min_amount",
+                    "type": "int64?"
+                }
+            ]
+        },
+        {
+            "name": "init",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr_account",
+                    "type": "name"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "liquiditylog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "liquidity0",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "liquidity1",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "total_liquidity",
+                    "type": "asset"
+                },
+                {
+                    "name": "reserve0",
+                    "type": "asset"
+                },
+                {
+                    "name": "reserve1",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "lockdtl_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "acttime",
+                    "type": "uint64"
+                },
+                {
+                    "name": "exptime",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "lockliq",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                },
+                {
+                    "name": "exptime",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "markets_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "asset"
+                },
+                {
+                    "name": "lock_liq",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "mixup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "mixup_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "orders_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity0",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "quantity1",
+                    "type": "extended_asset"
+                }
+            ]
+        },
+        {
+            "name": "pairidlog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "pairs_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "reserve0",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "reserve1",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "lock_liq",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "amplifier",
+                    "type": "uint64"
+                },
+                {
+                    "name": "virtual_price",
+                    "type": "float64"
+                },
+                {
+                    "name": "price0_last",
+                    "type": "float64"
+                },
+                {
+                    "name": "price1_last",
+                    "type": "float64"
+                },
+                {
+                    "name": "volume0",
+                    "type": "asset"
+                },
+                {
+                    "name": "volume1",
+                    "type": "asset"
+                },
+                {
+                    "name": "trades",
+                    "type": "uint64"
+                },
+                {
+                    "name": "last_updated",
+                    "type": "time_point_sec"
+                }
+            ]
+        },
+        {
+            "name": "pledgecond",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "min_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "oracle",
+                    "type": "uint8"
+                },
+                {
+                    "name": "oracleParam",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pledgelist_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "cdsid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "receive_time",
+                    "type": "uint64"
+                },
+                {
+                    "name": "expired_time",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pledgepara_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "annualized",
+                    "type": "uint64"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint64"
+                },
+                {
+                    "name": "min_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "max_amount",
+                    "type": "asset"
+                },
+                {
+                    "name": "oracle",
+                    "type": "uint8"
+                },
+                {
+                    "name": "oracleParam",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "pledgeparam",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "sym",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "annualized",
+                    "type": "uint64"
+                },
+                {
+                    "name": "duration",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pledgeslog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "receivetime",
+                    "type": "uint64"
+                },
+                {
+                    "name": "expiredtime",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cdsid",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pledgestatus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "pledgeid",
+                    "type": "uint64"
+                },
+                {
+                    "name": "status",
+                    "type": "uint8"
+                }
+            ]
+        },
+        {
+            "name": "receive",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "receivelog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "removepair",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                }
+            ]
+        },
+        {
+            "name": "reset",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "sendlog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "ext_quantity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setfee",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "trade_fee",
+                    "type": "uint8"
+                },
+                {
+                    "name": "protocol_fee",
+                    "type": "uint8?"
+                },
+                {
+                    "name": "fee_account",
+                    "type": "name?"
+                }
+            ]
+        },
+        {
+            "name": "setmintimes",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "minlocktimes",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setnotifiers",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "notifiers",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
+            "name": "setstatus",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "swap",
+            "base": "",
+            "fields": [
+                {
+                    "name": "mgr",
+                    "type": "name"
+                },
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "value",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "swap_row",
+            "base": "",
+            "fields": [
+                {
+                    "name": "balance",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "swaplog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity_in",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "quantity_out",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "protocol_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "trade_fee",
+                    "type": "asset"
+                },
+                {
+                    "name": "trade_price",
+                    "type": "float64"
+                },
+                {
+                    "name": "reserve0",
+                    "type": "asset"
+                },
+                {
+                    "name": "reserve1",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "tokenlog",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pair_id",
+                    "type": "symbol_code"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "action",
+                    "type": "name"
+                },
+                {
+                    "name": "liquidity",
+                    "type": "extended_asset"
+                },
+                {
+                    "name": "exptime",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "unlockliq",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "unpledge",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "cdsid",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "quantity",
+                    "type": "asset"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "bank",
+            "type": "bank",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cancel",
+            "type": "cancel",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "createpair",
+            "type": "createpair",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deposit",
+            "type": "deposit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "liquiditylog",
+            "type": "liquiditylog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "lockliq",
+            "type": "lockliq",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "mixup",
+            "type": "mixup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pairidlog",
+            "type": "pairidlog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pledgecond",
+            "type": "pledgecond",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pledgeparam",
+            "type": "pledgeparam",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pledgeslog",
+            "type": "pledgeslog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pledgestatus",
+            "type": "pledgestatus",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receive",
+            "type": "receive",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "receivelog",
+            "type": "receivelog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "removepair",
+            "type": "removepair",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reset",
+            "type": "reset",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sendlog",
+            "type": "sendlog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setfee",
+            "type": "setfee",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setmintimes",
+            "type": "setmintimes",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setnotifiers",
+            "type": "setnotifiers",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setstatus",
+            "type": "setstatus",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "swap",
+            "type": "swap",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "swaplog",
+            "type": "swaplog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "tokenlog",
+            "type": "tokenlog",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unlockliq",
+            "type": "unlockliq",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unpledge",
+            "type": "unpledge",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "withdraw",
+            "type": "withdraw",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "bank",
+            "type": "bank_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "config",
+            "type": "config_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "lockdtl",
+            "type": "lockdtl_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "markets",
+            "type": "markets_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "mixup",
+            "type": "mixup_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "orders",
+            "type": "orders_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "pairs",
+            "type": "pairs_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "pledgelist",
+            "type": "pledgelist_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "pledgepara",
+            "type": "pledgepara_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "swap",
+            "type": "swap_row",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
