@@ -505,7 +505,7 @@ void daoswap::withdraw(const name& owner, const asset& quantity)
     if ( out1.quantity.amount )
     {
          utils::transfer( get_self(), owner, out1, get_self().to_string() + ": withdraw");
-        _sub_swap(out0.contract,out0.quantity);
+        _sub_swap(out1.contract,out1.quantity);
     }
 }
 
