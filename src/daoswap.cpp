@@ -89,8 +89,8 @@ void daoswap::deposit( const name& owner, const symbol_code& pair_id, const std:
     // calculate total deposits based on reserves: reserves ratio should remain the same
     // if reserves empty, fallback to 1
 
-    const int128_t reserve0_tmp = utils::mul_amount(pair.reserve0.quantity.amount, precision_norm, sym0.precision());
-    const int128_t reserve1_tmp = utils::mul_amount(pair.reserve1.quantity.amount, precision_norm, sym1.precision());
+    const int128_t reserve0_tmp = utils::mul_amount128(pair.reserve0.quantity.amount, precision_norm, sym0.precision());
+    const int128_t reserve1_tmp = utils::mul_amount128(pair.reserve1.quantity.amount, precision_norm, sym1.precision());
 
 
     const int128_t reserve0 = pair.reserve0.quantity.amount ? reserve0_tmp : 1;
@@ -101,8 +101,8 @@ void daoswap::deposit( const name& owner, const symbol_code& pair_id, const std:
     //const extended_asset orders_quantity1 = orders.quantity1;
 
     // get owner order and calculate payment
-    const int128_t amount0 = utils::mul_amount(orders.quantity0.quantity.amount, precision_norm, sym0.precision());
-    const int128_t amount1 = utils::mul_amount(orders.quantity1.quantity.amount, precision_norm, sym1.precision());
+    const int128_t amount0 = utils::mul_amount128(orders.quantity0.quantity.amount, precision_norm, sym0.precision());
+    const int128_t amount1 = utils::mul_amount128(orders.quantity1.quantity.amount, precision_norm, sym1.precision());
     const int128_t payment = sqrt(amount0 * amount1);
   
     // calculate actual amounts to deposit
