@@ -424,7 +424,7 @@ asset daoswap::_get_amount_out( const asset& in, const symbol_code& pair_id)
     const int128_t reserve_out_c =   reserve_out >= MAX_NUMBER ? MIN_NUMBER:1;   
 
     // enforce minimum fee
-    if ( config.trade_fee ) check( in.amount * config.trade_fee / 10000, "600402:amount too small");
+    // if ( config.trade_fee ) check( in.amount * config.trade_fee / 10000, "600402:amount too small");
 
     // calculate out
    // const int64_t out = utils::div_amount( static_cast<int64_t>(utils::get_amount_out( amount_in - protocol_fee, reserve_in, reserve_out, config.trade_fee )), MAX_PRECISION, precision_out );
